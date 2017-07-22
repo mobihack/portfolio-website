@@ -65,6 +65,7 @@ for (i = 0; i < inputs.length; i++) ! function(e) {
         e.classList ? e.classList.remove(n) : e.className = e.className.replace(new RegExp("(^|\\b)" + n.split(" ").join("|") + "(\\b|$)", "gi"), " ")
     })
 }(i);
+
 /*----------------------------------------------------*/
 /* Smooth Scrolling
 ------------------------------------------------------ */
@@ -100,10 +101,3 @@ for (i = 0; i < inputs.length; i++) ! function(e) {
         })
     }
 }();
-
-/* TweenMax Animation */
-TweenMax.staggerFrom(".heading", 0.8, {
-    opacity: 0,
-    y: 20,
-    delay: 0.2
-}, 0.4);

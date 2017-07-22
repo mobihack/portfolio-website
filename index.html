@@ -37,19 +37,19 @@
             </div>
         </div>
         <div class="title">
-            <div><span class="typcn typcn-heart-outline icon heading"></span></div>
+            <div class="avatar_image"><span></span></div>
             <div class="smallsep heading"></div>
             <h1 class="heading">My Portfolio</h1>
             <h2 class="heading">Back-end &#183; UI/UX &#183; Sysadmin</h2>
-            <a data-smoothscroll href="#about">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-            </a>
+            <a data-smoothscroll data-speed="1000" class="mouse-scroll" href="#about">
+              <span class="mouse">
+                <span class="mouse-movement"> 
+                </span>
+              </span>
+              <span class="mouse-message fadeIn">scroll</span>
+            </a>    
         </div>
-        <a data-smoothscroll href="#about">
-            <div class="scroll-down"></div>
-        </a>
+        
         <span class="overlay">
 <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
@@ -58,7 +58,8 @@
 </svg>
   </span>
     </header>
-<div id="main">
+
+<div class="main">
     <!-- About Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
@@ -300,8 +301,6 @@
 
     <!-- Back to top float icon -->
     <a data-smoothscroll href="#header" id="scroll" title="Back To Top"><span></span></a>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
     <script src="/res/js/index.js"></script>
 
