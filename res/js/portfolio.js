@@ -1,4 +1,3 @@
-/*----------------------------------------------------*/
 /* Quote Loop
 ------------------------------------------------------ */
 function quoteLoop(elements, currIndex) { //elements list, the index to show
@@ -25,7 +24,7 @@ var elements = document.querySelectorAll('#quoteLoop > .quote');
 quoteLoop(elements, 0);
 
 /*----------------------------------------------------*/
-/* Navigation & Header Curved CUt Anim
+/* Navigation & Header Curved Cut Anim
 ------------------------------------------------------ */
 function inViewport(el) {
     var H = Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
@@ -37,8 +36,10 @@ window.onload = function() {
     var n = document.querySelector(".main_nav");
     var o = document.querySelector("#scroll");
     window.onscroll = function() {
-        var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-        scrollTop > 600 ? (n.classList.add("sticky"), o.classList.add("is-active")) : (n.classList.remove("sticky"), o.classList.remove("is-active"));
+        var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop,
+            scrollBottom = Math.max(document.body.offsetHeight - (scrollTop + window.innerHeight), 0);
+        (scrollTop > 600 && scrollBottom > 250) ? (n.classList.add("is-sticky")) : (n.classList.remove("is-sticky"));
+        scrollTop > 600 ? (o.classList.add("is-active")) : (o.classList.remove("is-active"));
 
         var window_offset = inViewport(document.querySelector('header')); 
         document.querySelector('.overlay').style.height=window_offset + "px";
@@ -49,7 +50,7 @@ window.onload = function() {
 // Mobile Navigation
 document.querySelector(".mobile-toggle").onclick = function(e) {
     var n = document.querySelector(".main_nav"),
-        i = "open-nav";
+        i = "is-open-nav";
     if (n.classList) n.classList.toggle(i);
     else {
         var s = n.className.split(" "),
@@ -61,7 +62,7 @@ var inputs = document.querySelectorAll(".main_nav li a");
 for (i = 0; i < inputs.length; i++) ! function(e) {
     inputs[e].addEventListener("click", function() {
         var e = document.querySelector(".main_nav"),
-            n = "open-nav";
+            n = "is-open-nav";
         e.classList ? e.classList.remove(n) : e.className = e.className.replace(new RegExp("(^|\\b)" + n.split(" ").join("|") + "(\\b|$)", "gi"), " ")
     })
 }(i);
