@@ -261,7 +261,7 @@ header {
     animation-direction: alternate;
     animation-delay: 0.75s;
 
-    background: url("./res/img/header-bg.jpeg");
+    background: url("../img/header-bg.jpeg");
 	background-color:white;
     /* For parallax:
 	abackground-attachment: fixed;*/
@@ -364,7 +364,7 @@ h2.heading{
 
     width: 128px;
     height: 128px;
-    background: white url('./res/img/mobihack_avatar_alpha.png');
+    background: white url('../img/mobihack_avatar_alpha.png');
     border-radius: 50%;
     z-index: 2;
     
